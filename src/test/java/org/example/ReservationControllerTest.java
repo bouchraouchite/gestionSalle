@@ -1,15 +1,17 @@
-package com.evaluation;
+package org.example;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
+
+import org.example.controller.ReservationController;
+import org.example.entity.Reservation;
+import org.example.repository.ReservationRepository;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
-import org.mockito.Mock;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
@@ -18,9 +20,7 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
-import com.evaluation.controller.ReservationController;
-import com.evaluation.entity.Reservation;
-import com.evaluation.repository.ReservationRepository;
+
 
 @WebMvcTest(ReservationController.class)
 public class ReservationControllerTest {
